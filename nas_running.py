@@ -104,7 +104,7 @@ for i in range(threads):
 input_fixpos = all_dpu_runners[0].get_input_tensors()[0].get_attr("fix_point")
 input_scale = 2**input_fixpos
 
-image = np.random.rand(28,28,3)
+image = np.random.rand(1024,768,3)
 image = image * input_scale
 image = image.astype(np.int8)
 
